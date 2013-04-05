@@ -2,4 +2,26 @@
     p {
         margin: 20px 0;
     }
+
+    blockquote,
+    pre {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    blockquote {
+        position: relative;
+        left: calculatePercentage(80, 620);
+        font-style: italic;
+    }
+
+    pre {
+        border: 1px solid $borderColour;
+        background-color: $codeBackground;
+        
+        margin-left: -#{calculatePercentage(160, 620)};
+        margin-right: -#{calculatePercentage(160, 620)};
+        
+        padding: pxToRem(30) calculatePercentage(159, 640);
+    }
 }
