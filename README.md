@@ -1,4 +1,4 @@
-This is the custom Tumblr theme for [my blog](blakehaswell.tumblr.com).
+This is the custom Tumblr theme for [my blog](http://blakehaswell.tumblr.com/).
 
 ### Colophon
 
