@@ -14,33 +14,37 @@
 
     <body class="l-container">
         
-        <div class="post">
+        <div class="l-innerContainer">
+        
+            <div class="post">
             
-            <h1 class="post-heading">Dispelling A Myth: Responsive Images</h1>
+                <h1 class="post-heading">Dispelling A Myth: Responsive Images</h1>
             
-            <div class="post-body">
-                <p>I recently read <em>Implementing Responsive Design</em> by Tim Kadlec. It was a really well put together book with great case studies and practical advice from a number of industry veterans. However there was a small bit of advice on responsive images which was incorrect:</p>
-                <blockquote>
-                    <p>&ldquo;It&rsquo;s important to note that the <code>img</code> element in your HTML cannot have the <code>height</code> and <code>width</code> attributes set. If those values are set, the image will not scale proportionally. For fluid images to work, you need to control the dimensions through CSS alone.&rdquo;</p>
-                </blockquote>
-                <p>In code, this would look like:</p>
-                <pre><code>&lt;img class="responsiveImage" src="funny-cats.jpg" alt="" /&gt;
+                <div class="post-body">
+                    <p>I recently read <em>Implementing Responsive Design</em> by Tim Kadlec. It was a really well put together book with great case studies and practical advice from a number of industry veterans. However there was a small bit of advice on responsive images which was incorrect:</p>
+                    <blockquote>
+                        <p>&ldquo;It&rsquo;s important to note that the <code>img</code> element in your HTML cannot have the <code>height</code> and <code>width</code> attributes set. If those values are set, the image will not scale proportionally. For fluid images to work, you need to control the dimensions through CSS alone.&rdquo;</p>
+                    </blockquote>
+                    <p>In code, this would look like:</p>
+                    <pre><code>&lt;img class="responsiveImage" src="funny-cats.jpg" alt="" /&gt;
 
 .responsiveImage {
     max-width: 100%;
 }</code></pre>
-                <p>Unfortunately there&rsquo;s a problem with this recommendation &ndash; if you forgo the <code>width</code> and <code>height</code> attributes on your images then the browser doesn&rsquo;t know how big the images should be until it begins downloading them. This means that the browser will begin to layout your page as soon as content is available and then, once the images begin to download, the browser will have to recalculate the layout again and again to account for the size of each image.</p>
-                <p>For users this is a jarring experience &ndash; it makes your site seem slow, and it can cause the user to get disorientated or lost as the layout of your page changes.</p>
-                <p>Luckily, you can have responsive images which scale proportionally while also having <code>width</code> and <code>height</code> attributes. Set the <code>max-width</code> property to <code>100%</code> like normal, and then set the <code>height</code> property to <code>auto</code>:</p>
-                <pre><code>&lt;img class="responsiveImage" src="funny-cats.jpg" width="640" height="480" alt="" /&gt;
+                    <p>Unfortunately there&rsquo;s a problem with this recommendation &ndash; if you forgo the <code>width</code> and <code>height</code> attributes on your images then the browser doesn&rsquo;t know how big the images should be until it begins downloading them. This means that the browser will begin to layout your page as soon as content is available and then, once the images begin to download, the browser will have to recalculate the layout again and again to account for the size of each image.</p>
+                    <p>For users this is a jarring experience &ndash; it makes your site seem slow, and it can cause the user to get disorientated or lost as the layout of your page changes.</p>
+                    <p>Luckily, you can have responsive images which scale proportionally while also having <code>width</code> and <code>height</code> attributes. Set the <code>max-width</code> property to <code>100%</code> like normal, and then set the <code>height</code> property to <code>auto</code>:</p>
+                    <pre><code>&lt;img class="responsiveImage" src="funny-cats.jpg" width="640" height="480" alt="" /&gt;
 
 .responsiveImage {
     height: auto;
     max-width: 100%;
 }</code></pre>
-                <p>Your images will still scale proportionally, but now the browser will know the image dimensions so it can figure out how to layout the page before downloading the images.</p>
-            </div>
+                    <p>Your images will still scale proportionally, but now the browser will know the image dimensions so it can figure out how to layout the page before downloading the images.</p>
+                </div>
             
+            </div>
+        
         </div>
 
         <script>

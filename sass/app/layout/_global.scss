@@ -1,0 +1,12 @@
+.l-container {
+    @include horizontallyCentred;
+    
+    max-width: pxToRem(960);
+    padding: 0 calculatePercentage(10, 960);
+}
+
+.l-innerContainer {
+    @include horizontallyCentred;
+    
+    width: calculatePercentage(620, 940);
+}
