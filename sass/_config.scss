@@ -10,5 +10,8 @@ $monoLineHeight: 20;
 
 // Colours
 
-// $bodyBackground: #fff;
-// $textColour: #000;
+$white: #fff;
+$blue: #0072bc;
+
+$bodyBackground: mix($blue, $white, 1%);
+$textColour: #252525;
