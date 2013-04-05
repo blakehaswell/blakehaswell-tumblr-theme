@@ -2,5 +2,5 @@ code,
 kbd,
 pre,
 samp {
-    @include fontSize($monoFontSize);
+    @include fontSize($monoFontSize, $monoLineHeight);
 }
