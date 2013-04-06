@@ -24,4 +24,12 @@
         
         padding: pxToRem(30) calculatePercentage(159, 640);
     }
+    
+    em {
+        font-style: italic;
+    }
+    
+    strong {
+        font-weight: bold;
+    }
 }
