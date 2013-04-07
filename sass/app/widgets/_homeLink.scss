@@ -1,0 +1,33 @@
+.homeLink {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    
+    position: relative;
+    
+    &:after {
+        @include generatedContent;
+        @include positionAbs($left: 0, $right: 0, $top: 50%);
+        
+        border-top: 1px solid $borderColour;
+    }
+    
+    a {
+        @include square(30px);
+        
+        display: block;
+        margin: 0 auto;
+        
+        position: relative;
+        z-index: 1;
+        
+        text-indent: -9999px;
+        
+        background-color: $bodyBackground;
+        background-image: url(../images/home.png);
+        
+        &:hover,
+        &:focus {
+            background-image: url(../images/home-active.png);
+        }
+    }
+}
