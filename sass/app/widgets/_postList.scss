@@ -5,22 +5,7 @@
 }
 
 .postList-list {
-    margin: pxToRem(20) 0;
-    
-    li {
-        position: relative;
-        padding-left: pxToRem(20);
-        
-        &:before {
-            $bulletSize: 6;
-            
-            @include generatedContent;
-            @include square(pxToRem($bulletSize));
-            @include positionAbs(0, pxToRem(($baseLineHeight / 2) - ($bulletSize / 2)));
-            
-            background-color: $textColour;
-        }
-    }
+    @include bulletList;
     
     a {
         @include link;
