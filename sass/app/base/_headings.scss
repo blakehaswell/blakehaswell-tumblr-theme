@@ -1,0 +1,6 @@
+@mixin h1 {
+    @include fontSize(48, 60);
+    
+    font-family: $headingFontFamily;
+    font-weight: bold;
+}

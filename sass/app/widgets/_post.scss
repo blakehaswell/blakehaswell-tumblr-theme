@@ -1,3 +1,9 @@
+.post-heading {
+    @include h1;
+    
+    margin: pxToRem(100) 0 pxToRem(30);
+}
+
 .post-body {
     p {
         margin: 20px 0;
