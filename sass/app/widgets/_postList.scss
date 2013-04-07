@@ -9,7 +9,7 @@
     
     li {
         position: relative;
-        padding-left: calculatePercentage(20, 620);
+        padding-left: pxToRem(20);
         
         &:before {
             $bulletSize: 6;
