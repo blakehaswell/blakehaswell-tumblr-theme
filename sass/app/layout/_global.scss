@@ -8,4 +8,5 @@
     @include horizontallyCentred;
     
     width: calculatePercentage(620, 940);
+    padding-bottom: pxToRem(80);
 }
