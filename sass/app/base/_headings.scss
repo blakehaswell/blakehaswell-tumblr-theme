@@ -4,3 +4,10 @@
     font-family: $headingFontFamily;
     font-weight: bold;
 }
+
+@mixin h2 {
+    @include fontSize(24, 30);
+    
+    font-family: $headingFontFamily;
+    font-weight: bold;
+}

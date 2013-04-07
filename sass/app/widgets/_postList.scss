@@ -1,0 +1,28 @@
+.postList-heading {
+    @include h2;
+    
+    margin: pxToRem(50) 0 pxToRem(20);
+}
+
+.postList-list {
+    margin: pxToRem(20) 0;
+    
+    li {
+        position: relative;
+        padding-left: calculatePercentage(20, 620);
+        
+        &:before {
+            $bulletSize: 6;
+            
+            @include generatedContent;
+            @include square(pxToRem($bulletSize));
+            @include positionAbs(0, pxToRem(($baseLineHeight / 2) - ($bulletSize / 2)));
+            
+            background-color: $textColour;
+        }
+    }
+    
+    a {
+        @include link;
+    }
+}

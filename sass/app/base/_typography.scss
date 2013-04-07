@@ -4,3 +4,17 @@ pre,
 samp {
     @include fontSize($monoFontSize, $monoLineHeight);
 }
+
+@mixin link {
+    color: $linkColour;
+    text-decoration: underline;
+    
+    &:hover,
+    &:focus {
+        color: $linkColourHover;
+    }
+
+    &:visited {
+        color: $linkColourVisited;
+    }
+}
