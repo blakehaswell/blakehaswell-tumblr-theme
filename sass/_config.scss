@@ -17,6 +17,9 @@ $blue: #0072bc;
 
 $bodyBackground: $white;
 $textColour: #252525;
+$linkColour: $blue;
+$linkColourHover: mix($textColour, $linkColour, 40%);
+$linkColourVisited: mix($bodyBackground, $linkColour, 40%);
 $borderColour: #ebebeb;
 $codeBackground: #fcfcfc;
 $captionColour: $grey;

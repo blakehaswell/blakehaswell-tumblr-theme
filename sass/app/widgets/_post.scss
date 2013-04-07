@@ -55,4 +55,18 @@
     strong {
         font-weight: bold;
     }
+    
+    a {
+        color: $linkColour;
+        text-decoration: underline;
+        
+        &:hover,
+        &:focus {
+            color: $linkColourHover;
+        }
+
+        &:visited {
+            color: $linkColourVisited;
+        }
+    }
 }
