@@ -1,0 +1,19 @@
+.bio {
+    overflow: hidden;
+    margin-top: pxToRem(50);
+}
+
+.bio-heading {
+    @include h2;
+}
+
+.bio-image {
+    float: left;
+    margin: pxToRem(20) pxToRem(20) pxToRem(20) 0;
+}
+
+.bio-body {
+    @include bodyCopy;
+    
+    overflow: hidden;
+}

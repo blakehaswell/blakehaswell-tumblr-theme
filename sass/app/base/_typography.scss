@@ -18,3 +18,60 @@ samp {
         color: $linkColourVisited;
     }
 }
+
+@mixin bodyCopy {
+    p {
+        margin: 20px 0;
+    }
+
+    blockquote,
+    figure,
+    pre {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    figure,
+    pre {
+        margin-left: -#{calculatePercentage(160, 620)};
+        margin-right: -#{calculatePercentage(160, 620)};
+    }
+    
+    blockquote {
+        position: relative;
+        left: calculatePercentage(80, 620);
+        font-style: italic;
+    }
+    
+    figcaption {
+        padding-left: calculatePercentage(160, 940);
+        padding-right: calculatePercentage(160, 940);
+        
+        margin-top: pxToRem(10);
+        
+        color: $captionColour;
+        text-align: center;
+    }
+
+    pre {
+        border: 1px solid $borderColour;
+        background-color: $codeBackground;
+        
+        margin-left: -#{calculatePercentage(160, 620)};
+        margin-right: -#{calculatePercentage(160, 620)};
+        
+        padding: pxToRem(30) calculatePercentage(159, 640);
+    }
+    
+    em {
+        font-style: italic;
+    }
+    
+    strong {
+        font-weight: bold;
+    }
+    
+    a {
+        @include link;
+    }
+}
