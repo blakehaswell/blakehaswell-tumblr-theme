@@ -10,6 +10,10 @@
 .bio-image {
     float: left;
     margin: pxToRem(20) pxToRem(20) pxToRem(20) 0;
+    
+    @media (max-width: pxToRem(640)) {
+        display: none;
+    }
 }
 
 .bio-body {
