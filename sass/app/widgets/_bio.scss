@@ -1,10 +1,18 @@
 .bio {
     overflow: hidden;
     margin-top: pxToRem(50);
+    
+    &.is-onHomePage {
+        margin-top: pxToRem(100);
+    }
 }
 
 .bio-heading {
     @include h2;
+    
+    .is-onHomePage & {
+        @include h1;
+    }
 }
 
 .bio-image {
