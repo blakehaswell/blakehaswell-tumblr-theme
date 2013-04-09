@@ -23,11 +23,12 @@
         text-indent: -9999px;
         
         background-color: $bodyBackground;
-        background-image: url(../images/home.png);
+        background-image: $icons-sprites;
+        @include icons-sprite-position("home");
         
         &:hover,
         &:focus {
-            background-image: url(../images/home-active.png);
+            @include icons-sprite-position("home-active");
         }
     }
 }
