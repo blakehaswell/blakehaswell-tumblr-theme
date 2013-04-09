@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+        <link rel="icon" href="public/images/favicon.png" />
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+        <link rel="stylesheet" href="public/css/app.css" />
+
+        <title>{block:PostTitle}{PostTitle} &ndash; {/block:PostTitle}{Title}</title>
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+    </head>
+
+    <body class="l-container">
+        
+        <div class="l-innerContainer">
+            
+            {block:IndexPage}
+                <div class="bio is-onHomePage">
+                    <h1 class="bio-heading">Hello</h1>
+                    <img class="bio-image" src="public/images/blake.png" width="140" height="215" alt="" />
+                    <div class="bio-body">
+                        <p><strong>I&rsquo;m Blake Haswell (<a href="https://twitter.com/haswell00">@haswell00</a>).</strong> I&rsquo;m a designer, developer, and user experience expert. I run <a href="http://simpleweb.com.au/">SimpleWeb</a>, a small web design studio where we use the web to help small companies grow.</p>
+                        <p>When I&rsquo;m not in-front of a computer I&rsquo;m usually racing karts or watching Formula 1.</p>
+                    </div>
+                </div>
+            
+                <div class="postList">
+                    <h2 class="postList-heading">I Also Write Words</h2>
+                    <ul class="postList-list">
+                        {block:Posts}
+                            {block:Text}
+                                <li>
+                                    <a href="{Permalink}">{Title}</a>
+                                </li>
+                            {/block:Text}
+                        {/block:Posts}
+                    </ul>
+                </div>
+            {/block:IndexPage}
+            
+            {block:PermalinkPage}
+                {block:Posts}
+                    {block:Text}
+                        <div class="post">
+
+                            <h1 class="post-heading">{Title}</h1>
+
+                            <div class="post-body">
+                                {Body}
+                            </div>
+
+                        </div>
+
+                        <div class="homeLink">
+                            <a href="/">Home</a>
+                        </div>
+
+                        <div class="bio">
+                            <h2 class="bio-heading">About Me</h2>
+                            <img class="bio-image" src="public/images/blake.png" width="140" height="215" alt="" />
+                            <div class="bio-body">
+                                <p><strong>I&rsquo;m Blake Haswell (<a href="https://twitter.com/haswell00">@haswell00</a>).</strong> I&rsquo;m a designer, developer, and user experience expert. I run <a href="http://simpleweb.com.au/">SimpleWeb</a>, a small web design studio where we use the web to help small companies grow.</p>
+                                <p>When I&rsquo;m not in-front of a computer I&rsquo;m usually racing karts or watching Formula 1.</p>
+                            </div>
+                        </div>
+                    {/block:Text}
+                {/block:Posts}
+            {/block:PermalinkPage} 
+        
+        </div>
+
+        <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-17842867-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script');
+                ga.async = true;
+                ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            }());
+        </script>
+
+    </body>
+
+</html>
