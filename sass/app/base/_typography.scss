@@ -41,6 +41,8 @@ samp {
 @mixin bodyCopy {
     h2 {
         @include h2;
+        
+        margin: pxToRem(50) 0 pxToRem(20);
     }
     
     p {
