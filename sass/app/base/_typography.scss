@@ -55,12 +55,14 @@ samp {
 
     blockquote,
     figure,
+    .figure,
     pre {
         margin-top: pxToRem(50);
         margin-bottom: pxToRem(50);
     }
     
     figure,
+    .figure,
     pre {
         margin-left: -#{calculatePercentage(160, 620)};
         margin-right: -#{calculatePercentage(160, 620)};
