@@ -40,7 +40,7 @@ samp {
 
 @mixin bodyCopy {
     p {
-        margin: 20px 0;
+        margin: pxToRem(20) 0;
     }
     
     ul {
@@ -50,8 +50,8 @@ samp {
     blockquote,
     figure,
     pre {
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin-top: pxToRem(50);
+        margin-bottom: pxToRem(50);
     }
     
     figure,
