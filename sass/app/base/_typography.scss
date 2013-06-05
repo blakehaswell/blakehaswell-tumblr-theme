@@ -78,7 +78,8 @@ samp {
         @include horizontallyCentred;
     }
     
-    figcaption {
+    figcaption,
+    .caption {
         padding-left: calculatePercentage(160, 940);
         padding-right: calculatePercentage(160, 940);
         
